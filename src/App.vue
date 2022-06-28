@@ -13,10 +13,41 @@ export default {
   components: {
     HelloWorld,
   },
+
+  data() {
+    return {
+      vm: {
+        castel: {
+          name: 'Caster of Jérôme!',
+        },
+        rooms: [
+          { name: 'room1', color: 'red' },
+          { name: 'room2', color: 'green' },
+          { name: 'room3', color: 'blue' },
+        ],
+      },
+    };
+  },
+
   mounted() {
-    console.log('Hello Jérôme');
+    console.log('Hello Jérôme!');
     console.log('Please create an object that have a property an array');
     console.log('Please iter over all properties and over all values');
+
+    var myObj = this.vm;
+
+    console.log(' my obj ', myObj);
+
+    console.log(' Castel of Jérôme has ', myObj.rooms.length, ' room');
+    console.log(' Castel of Jérôme has ', myObj.rooms, ' room');
+
+    console.log('Room 1 ', myObj.rooms[0]);
+    console.log('Room 2 ', myObj.rooms[1]);
+    console.log('Room 3 ', myObj.rooms[2]);
+
+    for (let index = 0; index < myObj.rooms.length; index++) {
+      console.log('Room  en° ' + index + ' is : ', myObj.rooms[index]);
+    }
   },
 };
 </script>
