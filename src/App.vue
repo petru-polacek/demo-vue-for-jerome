@@ -49,7 +49,7 @@ export default {
       console.log("Room  en° " + index + " is : ", myObj.rooms[index]);
     }
 
-    console.log("This is done!");
+    console.log("This is done !!!");
   },
 };
 </script>
